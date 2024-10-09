@@ -1,0 +1,114 @@
+@font-face {
+  font-family: MedievalSharp;
+  src: url(assets/fonts/MedievalSharp-Regular.ttf);
+}
+
+:root{
+  --tab-bg: rgb(247, 230, 174);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: MedievalSharp;
+}
+
+#root{
+  min-height: 100vh;
+  width: 100%;
+  /* overflow: hidden; */
+  background-color: rgb(109, 58, 0);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+main{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+aside.left{
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 10px;
+}
+
+.tab{
+  background-color: var(--tab-bg);
+  box-shadow: 0px 0px 15px rgba(252, 203, 113, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+
+  div{
+    border-top: 1px solid black;
+    padding: 5px;
+  }
+
+  .stored{
+    background-color: gray;
+    color: var(--tab-bg);
+    border: none;
+    font-size: 2rem;
+  }
+
+  h2{
+    text-align: right;
+  }
+}
+
+aside.right{
+  min-width: 200px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+
+  button{
+    font-size: 1.5rem;
+    background-color: var(--tab-bg);
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+  }
+}
+
+.dice-holder{
+  display: block;
+  position: relative;
+  aspect-ratio: 1;
+}
+
+.dice{
+  width: 100px;
+  background-color: wheat;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 2rem;
+  position: absolute;
+}
+
+main>div{
+    height: 50vh;
+    max-width: 50vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.selected-dice{
+  border: 5px solid rgb(245, 95, 50);
+}
